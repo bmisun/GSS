@@ -1,0 +1,365 @@
+@import url(./reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* COMMON */
+body {
+  height: 100%;
+  font: 16px/1.5 "Montserrat", "Roboto", "Noto Sans KR", "PingFang SC", "Apple SD Gothic Neo", "Microsoft YaHei UI", "Malgun Gothic", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 2em;
+  color: #000;
+}
+
+.hidden {
+  position: absolute;
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  font: 0/0 inherit;
+}
+
+.navi {
+  display: flex;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1em 2em;
+  background-color: #fe5000;
+  color: white;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #F5F5F5;
+}
+.header .logo a {
+  display: block;
+  width: 150px;
+  height: 100px;
+  background-color: aquamarine;
+}
+
+.gnb {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+.gnb > li {
+  margin: 0 1em;
+}
+.gnb > li > a {
+  display: block;
+  line-height: 100px;
+  padding: 0 1.5em;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+}
+.gnb > li:hover .gnb_sub {
+  transform: scaleY(100%);
+  opacity: 1;
+}
+.gnb > li.active > a {
+  color: #fe5000;
+}
+.gnb_sub {
+  flex-direction: column;
+  border: 1px solid #EEE;
+  transform: scaleY(0%);
+  transform-origin: top;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.gnb_sub > li > a {
+  display: block;
+  padding: 1em 2em;
+  text-align: center;
+}
+.gnb_sub > li > a:hover {
+  background-color: #fe5000;
+  color: white;
+}
+.gnb_sub > li + li {
+  border-top: 1px solid #EEE;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 5em;
+  padding: 3em 0;
+  background-color: black;
+  color: white;
+}
+.footer .navi {
+  justify-content: space-between;
+  padding: 2em;
+  border-bottom: 1px solid #555;
+}
+
+.fnb {
+  display: flex;
+}
+.fnb li + li:before {
+  content: "";
+  margin: 0 1em;
+  border-left: 1px solid #555;
+}
+.fnb li a {
+  color: inherit;
+}
+
+.ft_sns {
+  display: flex;
+}
+.ft_sns li + li {
+  margin-left: 1em;
+}
+.ft_sns li a {
+  color: inherit;
+}
+
+.copyright {
+  display: flex;
+  margin: 1em 0;
+  padding: 2em;
+  color: #888;
+}
+.copyright .link {
+  display: flex;
+}
+.copyright .link li a {
+  color: inherit;
+}
+
+.tab_btn {
+  display: flex;
+  max-width: 800px;
+  margin: 2em auto;
+}
+.tab_btn > li {
+  position: relative;
+}
+.tab_btn > li > a {
+  display: block;
+  text-align: center;
+  color: #888;
+}
+.tab_btn > li > a.active {
+  font-weight: bold;
+  color: black;
+}
+.tab_btn.tp-box > li {
+  flex: 1;
+  margin-left: -1px;
+  border: 1px solid black;
+}
+.tab_btn.tp-box > li > a {
+  width: 100%;
+  padding: 1em 0;
+}
+.tab_btn.tp-box > li > a.active {
+  background-color: black;
+  color: white;
+}
+.tab_btn.tp-bar {
+  justify-content: center;
+  border-bottom: 1px solid #DDD;
+}
+.tab_btn.tp-bar > li {
+  margin: 2em 0 1em;
+  border-left: 1px solid #DDD;
+}
+.tab_btn.tp-bar > li:last-child {
+  border-right: 1px solid #DDD;
+}
+.tab_btn.tp-bar > li > a {
+  padding: 0 2em;
+}
+.tab_btn.tp-bar > li > a.active {
+  font-weight: bold;
+  color: black;
+}
+
+/* CONTENTS */
+.page_title {
+  margin: 5em 0 2em;
+  font-weight: 600;
+  font-size: 3em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main_visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.main_conner {
+  width: 100vw;
+  height: 100vh;
+}
+.main_conner:nth-of-type(1) {
+  background-color: cornsilk;
+}
+.main_conner:nth-of-type(2) {
+  background-color: azure;
+}
+.main_conner:nth-of-type(3) {
+  background-color: seashell;
+}
+
+dl {
+  display: flex;
+}
+dl:not(:first-of-type) {
+  margin-top: 1em;
+}
+dl > dt {
+  font-weight: bold;
+}
+dl > dd dl:not(:first-of-type) {
+  margin-top: 1em;
+}
+
+.contact {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.25em;
+}
+.contact:not(:first-of-type) {
+  margin-top: 2em;
+}
+.contact.location dl dd:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url("/images/m41_location_ico.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contact > dt {
+  width: 175px;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+.contact dd {
+  margin-bottom: 1em;
+}
+.contact dd dl {
+  display: block;
+}
+
+.box_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box_wrap + .box_wrap {
+  margin-top: 10em;
+}
+.box_wrap .container {
+  display: flex;
+  gap: 3em;
+}
+.box_wrap:nth-child(odd) .container {
+  flex-direction: row;
+}
+.box_wrap:nth-child(even) .container {
+  flex-direction: row-reverse;
+}
+.box_wrap .img_box {
+  flex: 4;
+}
+.box_wrap .img_box > img {
+  width: 100%;
+}
+.box_wrap .txt_box {
+  flex: 6;
+  font: 200 1em/1.8 "Noto Sans KR";
+}
+.box_wrap .txt_box h4:before {
+  content: "";
+  display: block;
+  background-color: #fe5000;
+  width: 2em;
+  height: 2px;
+}
+.box_wrap .txt_box p + p {
+  margin-top: 1em;
+}
+
+.info_wrap {
+  padding: 2em 0;
+}
+.info_wrap > dl > dt:before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  margin-right: 0.5em;
+  line-height: 1.5;
+  vertical-align: middle;
+  border-radius: 3px;
+  background-color: black;
+}
+.info_wrap dl dt {
+  min-width: 6em;
+}
+.info_wrap dl dd {
+  font-weight: 400;
+  color: #888;
+}
+.info_wrap dl dd dl {
+  margin-top: 0.5em;
+}
+.info_wrap.exbt_summary {
+  margin: 3em 0;
+  padding: 1em;
+  background-color: white;
+}
+.info_wrap.see_summary {
+  font-size: 1.25em;
+}
+.info_wrap.see_summary dl {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #DDD;
+}
+
+.exbt {
+  padding: 3em 0;
+  background-color: #F5F5F5;
+}
+.exbt .txt_box {
+  margin-left: 3em;
+}
+
+.title_wrap.has-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/*# sourceMappingURL=style.css.map */

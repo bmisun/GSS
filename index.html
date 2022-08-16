@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font css -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" />
+    <!-- // font css -->
     <link rel="stylesheet" href="./style/style.css" />
     <title>GSS - 그라운드시소 클론</title>
 </head>
+
 <body>
     <!-- header 시작 -->
     <div class="header">
@@ -15,11 +21,11 @@
                 <span class="hidden">그라운드 시소</span>
             </a>
         </h1>
-        
-        <ul class="navi gnb">
+
+        <ul class="gnb">
             <li>
                 <a href="./sub1.html">Exhibitions</a>
-                <ul class="navi gnb_sub">
+                <ul class="gnb_sub">
                     <li><a href="#">서촌</a></li>
                     <li><a href="#">성수</a></li>
                     <li><a href="#">명동</a></li>
@@ -30,7 +36,7 @@
             </li>
             <li>
                 <a href="./sub2.html">About</a>
-                <ul class="navi gnb_sub">
+                <ul class="gnb_sub">
                     <li><a href="#">그라운드시소</a></li>
                     <li><a href="#">미디어앤아트</a></li>
                 </ul>
@@ -40,7 +46,7 @@
             </li>
         </ul>
 
-        <ul class="">
+        <ul class="tnb">
             <li><a href="./login.html">Login</a></li>
             <li><button type="button"><span class="text">전체메뉴 열기</span></button></li>
         </ul>
@@ -49,58 +55,60 @@
 
     <!-- main 시작 -->
     <div class="main">
-        <div class="main_conner">
+        <div class="main_visual">
             1. 전체 이미지 (화면의 100%가 꽉차게)
         </div>
 
-        <div class="main_conner">
-            <div class="img">
-                <img src="" alt="">
-            </div>
+        <section class="box_wrap main_conner">
+            <div class="container">
+                <div class="img_box">
+                    <img src="https://placeimg.com/400/300/nature" alt="">
+                </div>
 
-            <div class="text">
-                그라운드시소 서촌
-                레드룸
-                Love Is in the Air
-                2022년 04월 28일 (목) - 2022년 11월 06일 (일)
-                그라운드시소 서촌
-                <a href="#" class="btn btn_more">MORE</a>
+                <div class="txt_box">
+                    <p>그라운드시소 서촌</p>
+                    <p>레드룸</p>
+                    <p>Love Is in the Air</p>
+                    <p>2022년 04월 28일 (목) - 2022년 11월 06일 (일)</p>
+                    <p>그라운드시소 서촌</p>
+                    <p><a href="#" class="btn btn_more">MORE</a></p>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="main_conner">
-            <div class="img">
-                <img src="" alt="">
-            </div>
+        <section class="box_wrap main_conner">
+            <div class="container">
+                <div class="img_box">
+                    <img src="https://placeimg.com/400/300/nature" alt="">
+                </div>
 
-            <div class="text">
-                그라운드시소 명동
-                포에틱 AI
-                온몸을 휘감는 디지털 페인팅의 향연
-                2022년 04월 07일 (목) - 2022년 10월 06일 (목)
-                그라운드시소 명동
-                <a href="#" class="btn btn_more">MORE</a>
+                <div class="txt_box">
+                    <p>그라운드시소 명동</p>
+                    <p>포에틱 AI</p>
+                    <p>온몸을 휘감는 디지털 페인팅의 향연</p>
+                    <p>2022년 04월 07일 (목) - 2022년 10월 06일 (목)</p>
+                    <p>그라운드시소 명동</p>
+                    <p><a href="#" class="btn btn_more">MORE</a></p>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="main_conner">
-            <div>
-                MEMBERSHIP
-                준비 중입니다.
-            </div>
-        </div>
+        <section class="box_wrap main_conner">
+            <p>MEMBERSHIP</p>
+            <p>준비 중입니다.</p>
+        </section>
     </div>
     <!-- main 끝 -->
 
     <!-- footer 시작 -->
     <div class="footer">
-        <div class="">
-            <ul class="navi fnb">
+        <div class="navi">
+            <ul class="fnb">
                 <li><a href="#">이용약관</a></li>
                 <li><a href="#">개인정보 처리방침</a></li>
             </ul>
-    
-            <ul class="navi ft_sns">
+
+            <ul class="ft_sns">
                 <li><a href="#">instargram</a></li>
                 <li><a href="#">youtube</a></li>
             </ul>
@@ -115,7 +123,7 @@
             </p>
             <p>COPYRIGHT 2020 BY GROUNDSEESAW ALL RIGHTS RESEVED.</p>
 
-            <ul class="navi ft_company">
+            <ul class="ft_company">
                 <li><a href="#">그라운드시소</a></li>
                 <li><a href="#">미디어앤아트</a></li>
             </ul>
@@ -123,4 +131,5 @@
     </div>
     <!-- footer 끝 -->
 </body>
+
 </html>
